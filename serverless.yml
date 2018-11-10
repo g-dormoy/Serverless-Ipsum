@@ -3,7 +3,12 @@ service: lorem-ipsum
 provider:
   name: aws
   runtime: nodejs8.10
+  region: eu-west-3
 
 functions:
   lorem:
     handler: handler.lorem
+    events:
+      - http:
+          path: /
+          method: get

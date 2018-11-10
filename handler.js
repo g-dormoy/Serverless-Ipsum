@@ -4,9 +4,10 @@ const loremIpsum = require("lorem-ipsum");
 const lorem = (event, context, callback) => {
     const res = {
         statusCode: 200,
-        body: JSON.stringify({
-            message: loremIpsum()
-        })
+        headers: {
+            'Content-Type': 'text/plain'
+        },
+        body: loremIpsum()
     };
     callback(undefined, res);
 };
