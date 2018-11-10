@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "build": "npx tsc",
+    "deploy": "serverless deploy -v",
+    "invoke:lorem-local": "serverless invoke local -f lorem",
+    "invoke:lorem-remote": "serverless invoke -f lorem -l",
+    "clean": "serverless remove"
+  },
+  "dependencies": {
+    "aws-lambda": "^0.1.2",
+    "lorem-ipsum": "^1.0.6"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.15",
+    "@types/node": "^10.12.3",
+    "typescript": "^3.1.6"
+  },
+  "license": "MIT"
+}

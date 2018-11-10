@@ -1,0 +1,9 @@
+service: lorem-ipsum
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+
+functions:
+  lorem:
+    handler: handler.lorem
